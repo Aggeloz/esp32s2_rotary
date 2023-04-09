@@ -1,0 +1,96 @@
+[1/5] cd /home/edgie/esp/read_rotary/build/esp-idf/esptool_py && /home/edgie/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/edgie/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/edgie/esp/read_rotary/build/partition_table/partition-table.bin /home/edgie/esp/read_rotary/build/read_rotary.bin
+read_rotary.bin binary size 0x2acf0 bytes. Smallest app partition is 0x100000 bytes. 0xd5310 bytes (83%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/edgie/esp/read_rotary/build/bootloader/esp-idf/esptool_py && /home/edgie/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/edgie/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/edgie/esp/read_rotary/build/bootloader/bootloader.bin
+Bootloader binary size 0x5580 bytes. 0x1a80 bytes (24%) free.
+[2/3] cd /home/edgie/esp/esp-idf/components/esptool_py && /home/edgie/.espressif/tools/cmake/3.24.0/bin/cmake -D IDF_PATH=/home/edgie/esp/esp-idf -D "SERIAL_TOOL=/home/edgie/.espressif/python_env/idf5.1_py3.10_env/bin/python;;/home/edgie/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s2" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/edgie/esp/read_rotary/build -P /home/edgie/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool esp32s2 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 read_rotary.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.5.1
+Serial port /dev/ttyACM0
+Connecting....
+Chip is ESP32-S2FNR2 (revision v0.0)
+Features: WiFi, Embedded Flash 4MB, Embedded PSRAM 2MB, ADC and temperature sensor calibration in BLK2 of efuse V2
+Crystal is 40MHz
+MAC: 48:27:e2:46:46:70
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00006fff...
+Flash will be erased from 0x00010000 to 0x0003afff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21888 bytes to 13920...
+Writing at 0x00001000... (14 %)
+Writing at 0x0000252b... (28 %)
+Writing at 0x00003185... (42 %)
+Writing at 0x00003cd4... (57 %)
+Writing at 0x00004743... (71 %)
+Writing at 0x00005117... (85 %)
+Writing at 0x00005c3a... (100 %)
+Wrote 21888 bytes (13920 compressed) at 0x00001000 in 0.3 seconds (effective 562.6 kbit/s)...
+Hash of data verified.
+Compressed 175344 bytes to 96543...
+Writing at 0x00010000... (2 %)
+Writing at 0x00011170... (4 %)
+Writing at 0x00012765... (6 %)
+Writing at 0x00013fab... (8 %)
+Writing at 0x0001573a... (10 %)
+Writing at 0x0001728e... (12 %)
+Writing at 0x00018b8b... (14 %)
+Writing at 0x0001ab66... (16 %)
+Writing at 0x0001bb30... (18 %)
+Writing at 0x0001c4ce... (20 %)
+Writing at 0x0001cfde... (22 %)
+Writing at 0x0001da58... (25 %)
+Writing at 0x0001e5f4... (27 %)
+Writing at 0x0001f2fa... (29 %)
+Writing at 0x0001fdf3... (31 %)
+Writing at 0x00020a01... (33 %)
+Writing at 0x000215b2... (35 %)
+Writing at 0x00022035... (37 %)
+Writing at 0x00022a97... (39 %)
+Writing at 0x000234c7... (41 %)
+Writing at 0x00024218... (43 %)
+Writing at 0x00024d31... (45 %)
+Writing at 0x00025968... (47 %)
+Writing at 0x00026629... (50 %)
+Writing at 0x0002724c... (52 %)
+Writing at 0x00027d91... (54 %)
+Writing at 0x0002886d... (56 %)
+Writing at 0x000292ac... (58 %)
+Writing at 0x00029d10... (60 %)
+Writing at 0x0002a841... (62 %)
+Writing at 0x0002b46d... (64 %)
+Writing at 0x0002ca17... (66 %)
+Writing at 0x0002d609... (68 %)
+Writing at 0x0002e009... (70 %)
+Writing at 0x0002e9c7... (72 %)
+Writing at 0x0002f8bb... (75 %)
+Writing at 0x00030d51... (77 %)
+Writing at 0x00032fc4... (79 %)
+Writing at 0x00033eaa... (81 %)
+Writing at 0x000349ec... (83 %)
+Writing at 0x00035395... (85 %)
+Writing at 0x00035f22... (87 %)
+Writing at 0x00036a74... (89 %)
+Writing at 0x0003780f... (91 %)
+Writing at 0x00038821... (93 %)
+Writing at 0x0003921e... (95 %)
+Writing at 0x00039d62... (97 %)
+Writing at 0x0003ab75... (100 %)
+Wrote 175344 bytes (96543 compressed) at 0x00010000 in 1.5 seconds (effective 905.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 547.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+WARNING: ESP32-S2FNR2 (revision v0.0) chip was placed into download mode using GPIO0.
+esptool.py can not exit the download mode over USB. To run the app, reset the chip manually.
+To suppress this note, set --after option to 'no_reset'.
+FAILED: CMakeFiles/flash /home/edgie/esp/read_rotary/build/CMakeFiles/flash 
+cd /home/edgie/esp/esp-idf/components/esptool_py && /home/edgie/.espressif/tools/cmake/3.24.0/bin/cmake -D IDF_PATH=/home/edgie/esp/esp-idf -D "SERIAL_TOOL=/home/edgie/.espressif/python_env/idf5.1_py3.10_env/bin/python;;/home/edgie/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s2" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/edgie/esp/read_rotary/build -P /home/edgie/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

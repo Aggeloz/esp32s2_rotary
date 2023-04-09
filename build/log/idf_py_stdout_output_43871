@@ -1,0 +1,1036 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /home/edgie/esp/read_rotary/build/bootloader/esp-idf/esptool_py && /home/edgie/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/edgie/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/edgie/esp/read_rotary/build/bootloader/bootloader.bin
+Bootloader binary size 0x5580 bytes. 0x1a80 bytes (24%) free.
+[2/9] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/rotary.cpp.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/rotary.cpp.obj 
+/home/edgie/.espressif/tools/xtensa-esp32s2-elf/esp-12.2.0_20230208/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-g++ -DESP_PLATFORM -DIDF_VER=\"v5.1-dev-4264-g81e1e65995\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DUNITY_INCLUDE_CONFIG_H -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/edgie/esp/read_rotary/build/config -I/home/edgie/esp/read_rotary/main -I/home/edgie/esp/esp-idf/components/newlib/platform_include -I/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/edgie/esp/esp-idf/components/freertos/esp_additions/include/freertos -I/home/edgie/esp/esp-idf/components/freertos/esp_additions/include -I/home/edgie/esp/esp-idf/components/freertos/esp_additions/arch/xtensa/include -I/home/edgie/esp/esp-idf/components/esp_hw_support/include -I/home/edgie/esp/esp-idf/components/esp_hw_support/include/soc -I/home/edgie/esp/esp-idf/components/esp_hw_support/include/soc/esp32s2 -I/home/edgie/esp/esp-idf/components/esp_hw_support/port/esp32s2/. -I/home/edgie/esp/esp-idf/components/esp_hw_support/port/esp32s2/private_include -I/home/edgie/esp/esp-idf/components/heap/include -I/home/edgie/esp/esp-idf/components/log/include -I/home/edgie/esp/esp-idf/components/soc/include -I/home/edgie/esp/esp-idf/components/soc/esp32s2 -I/home/edgie/esp/esp-idf/components/soc/esp32s2/include -I/home/edgie/esp/esp-idf/components/hal/esp32s2/include -I/home/edgie/esp/esp-idf/components/hal/include -I/home/edgie/esp/esp-idf/components/hal/platform_port/include -I/home/edgie/esp/esp-idf/components/esp_rom/include -I/home/edgie/esp/esp-idf/components/esp_rom/include/esp32s2 -I/home/edgie/esp/esp-idf/components/esp_rom/esp32s2 -I/home/edgie/esp/esp-idf/components/esp_common/include -I/home/edgie/esp/esp-idf/components/esp_system/include -I/home/edgie/esp/esp-idf/components/esp_system/port/soc -I/home/edgie/esp/esp-idf/components/esp_system/port/include/private -I/home/edgie/esp/esp-idf/components/xtensa/include -I/home/edgie/esp/esp-idf/components/xtensa/esp32s2/include -I/home/edgie/esp/esp-idf/components/lwip/include -I/home/edgie/esp/esp-idf/components/lwip/include/apps -I/home/edgie/esp/esp-idf/components/lwip/include/apps/sntp -I/home/edgie/esp/esp-idf/components/lwip/lwip/src/include -I/home/edgie/esp/esp-idf/components/lwip/port/include -I/home/edgie/esp/esp-idf/components/lwip/port/freertos/include -I/home/edgie/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/edgie/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/edgie/esp/esp-idf/components/esp_ringbuf/include -I/home/edgie/esp/esp-idf/components/efuse/include -I/home/edgie/esp/esp-idf/components/efuse/esp32s2/include -I/home/edgie/esp/esp-idf/components/driver/include -I/home/edgie/esp/esp-idf/components/driver/deprecated -I/home/edgie/esp/esp-idf/components/driver/analog_comparator/include -I/home/edgie/esp/esp-idf/components/driver/dac/include -I/home/edgie/esp/esp-idf/components/driver/gpio/include -I/home/edgie/esp/esp-idf/components/driver/gptimer/include -I/home/edgie/esp/esp-idf/components/driver/i2c/include -I/home/edgie/esp/esp-idf/components/driver/i2s/include -I/home/edgie/esp/esp-idf/components/driver/ledc/include -I/home/edgie/esp/esp-idf/components/driver/mcpwm/include -I/home/edgie/esp/esp-idf/components/driver/parlio/include -I/home/edgie/esp/esp-idf/components/driver/pcnt/include -I/home/edgie/esp/esp-idf/components/driver/rmt/include -I/home/edgie/esp/esp-idf/components/driver/sdio_slave/include -I/home/edgie/esp/esp-idf/components/driver/sdmmc/include -I/home/edgie/esp/esp-idf/components/driver/sigma_delta/include -I/home/edgie/esp/esp-idf/components/driver/spi/include -I/home/edgie/esp/esp-idf/components/driver/temperature_sensor/include -I/home/edgie/esp/esp-idf/components/driver/touch_sensor/include -I/home/edgie/esp/esp-idf/components/driver/twai/include -I/home/edgie/esp/esp-idf/components/driver/uart/include -I/home/edgie/esp/esp-idf/components/driver/usb_serial_jtag/include -I/home/edgie/esp/esp-idf/components/driver/touch_sensor/esp32s2/include -I/home/edgie/esp/esp-idf/components/esp_pm/include -I/home/edgie/esp/esp-idf/components/mbedtls/port/include -I/home/edgie/esp/esp-idf/components/mbedtls/mbedtls/include -I/home/edgie/esp/esp-idf/components/mbedtls/mbedtls/library -I/home/edgie/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/edgie/esp/esp-idf/components/esp_app_format/include -I/home/edgie/esp/esp-idf/components/bootloader_support/include -I/home/edgie/esp/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/edgie/esp/esp-idf/components/esp_partition/include -I/home/edgie/esp/esp-idf/components/app_update/include -I/home/edgie/esp/esp-idf/components/esp_mm/include -I/home/edgie/esp/esp-idf/components/spi_flash/include -I/home/edgie/esp/esp-idf/components/pthread/include -I/home/edgie/esp/esp-idf/components/esp_timer/include -I/home/edgie/esp/esp-idf/components/app_trace/include -I/home/edgie/esp/esp-idf/components/esp_event/include -I/home/edgie/esp/esp-idf/components/nvs_flash/include -I/home/edgie/esp/esp-idf/components/esp_phy/include -I/home/edgie/esp/esp-idf/components/esp_phy/esp32s2/include -I/home/edgie/esp/esp-idf/components/vfs/include -I/home/edgie/esp/esp-idf/components/esp_netif/include -I/home/edgie/esp/esp-idf/components/wpa_supplicant/include -I/home/edgie/esp/esp-idf/components/wpa_supplicant/port/include -I/home/edgie/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/edgie/esp/esp-idf/components/esp_coex/include -I/home/edgie/esp/esp-idf/components/esp_wifi/include -I/home/edgie/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/edgie/esp/esp-idf/components/unity/include -I/home/edgie/esp/esp-idf/components/unity/unity/src -I/home/edgie/esp/esp-idf/components/cmock/CMock/src -I/home/edgie/esp/esp-idf/components/console -I/home/edgie/esp/esp-idf/components/http_parser -I/home/edgie/esp/esp-idf/components/esp-tls -I/home/edgie/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/home/edgie/esp/esp-idf/components/esp_adc/include -I/home/edgie/esp/esp-idf/components/esp_adc/interface -I/home/edgie/esp/esp-idf/components/esp_adc/esp32s2/include -I/home/edgie/esp/esp-idf/components/esp_adc/deprecated/include -I/home/edgie/esp/esp-idf/components/esp_eth/include -I/home/edgie/esp/esp-idf/components/esp_gdbstub/include -I/home/edgie/esp/esp-idf/components/esp_gdbstub/xtensa -I/home/edgie/esp/esp-idf/components/esp_gdbstub/esp32s2 -I/home/edgie/esp/esp-idf/components/esp_hid/include -I/home/edgie/esp/esp-idf/components/tcp_transport/include -I/home/edgie/esp/esp-idf/components/esp_http_client/include -I/home/edgie/esp/esp-idf/components/esp_http_server/include -I/home/edgie/esp/esp-idf/components/esp_https_ota/include -I/home/edgie/esp/esp-idf/components/esp_lcd/include -I/home/edgie/esp/esp-idf/components/esp_lcd/interface -I/home/edgie/esp/esp-idf/components/protobuf-c/protobuf-c -I/home/edgie/esp/esp-idf/components/protocomm/include/common -I/home/edgie/esp/esp-idf/components/protocomm/include/security -I/home/edgie/esp/esp-idf/components/protocomm/include/transports -I/home/edgie/esp/esp-idf/components/esp_local_ctrl/include -I/home/edgie/esp/esp-idf/components/esp_psram/include -I/home/edgie/esp/esp-idf/components/espcoredump/include -I/home/edgie/esp/esp-idf/components/espcoredump/include/port/xtensa -I/home/edgie/esp/esp-idf/components/wear_levelling/include -I/home/edgie/esp/esp-idf/components/sdmmc/include -I/home/edgie/esp/esp-idf/components/fatfs/diskio -I/home/edgie/esp/esp-idf/components/fatfs/vfs -I/home/edgie/esp/esp-idf/components/fatfs/src -I/home/edgie/esp/esp-idf/components/idf_test/include -I/home/edgie/esp/esp-idf/components/idf_test/include/esp32s2 -I/home/edgie/esp/esp-idf/components/ieee802154/include -I/home/edgie/esp/esp-idf/components/json/cJSON -I/home/edgie/esp/esp-idf/components/mqtt/esp-mqtt/include -I/home/edgie/esp/esp-idf/components/perfmon/include -I/home/edgie/esp/esp-idf/components/spiffs/include -I/home/edgie/esp/esp-idf/components/touch_element/include -I/home/edgie/esp/esp-idf/components/ulp/ulp_common/include -I/home/edgie/esp/esp-idf/components/ulp/ulp_common/include/esp32s2 -I/home/edgie/esp/esp-idf/components/usb/include -I/home/edgie/esp/esp-idf/components/wifi_provisioning/include -mlongcalls  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=/home/edgie/esp/read_rotary=. -fmacro-prefix-map=/home/edgie/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu++20 -fno-exceptions -fno-rtti -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/rotary.cpp.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/rotary.cpp.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/rotary.cpp.obj -c /home/edgie/esp/read_rotary/main/rotary.cpp
+In file included from /home/edgie/esp/read_rotary/main/rotary.cpp:2:
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:40:6: error: #error "include FreeRTOS.h" must appear in source files before "include queue.h"
+   40 |     #error "include FreeRTOS.h" must appear in source files before "include queue.h"
+      |      ^~~~~
+In file included from /home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:49:
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:40:6: error: #error "include FreeRTOS.h must appear in source files before include task.h"
+   40 |     #error "include FreeRTOS.h must appear in source files before include task.h"
+      |      ^~~~~
+In file included from /home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:43:
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:67:6: error: #error "FreeRTOS.h must be included before list.h"
+   67 |     #error "FreeRTOS.h must be included before list.h"
+      |      ^~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:152:25: error: 'TickType_t' does not name a type
+  152 |     configLIST_VOLATILE TickType_t xItemValue;              /*< The value being listed.  In most cases this is used to sort the list in descending order. */
+      |                         ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:164:25: error: 'TickType_t' does not name a type
+  164 |     configLIST_VOLATILE TickType_t xItemValue;
+      |                         ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:176:14: error: 'UBaseType_t' does not name a type
+  176 |     volatile UBaseType_t uxNumberOfItems;
+      |              ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:354:47: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  354 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:365:55: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  365 | void vListInitialiseItem( ListItem_t * const pxItem ) PRIVILEGED_FUNCTION;
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:379:54: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  379 |                   ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:401:57: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  401 |                      ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                         ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:416:1: error: 'UBaseType_t' does not name a type
+  416 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:96:9: error: ISO C++ forbids declaration of 'BaseType_t' with no type [-fpermissive]
+   96 | typedef BaseType_t (* TaskHookFunction_t)( void * );
+      |         ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:96:9: error: typedef 'BaseType_t' is initialized (use 'decltype' instead)
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:96:23: error: 'TaskHookFunction_t' was not declared in this scope
+   96 | typedef BaseType_t (* TaskHookFunction_t)( void * );
+      |                       ^~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:126:5: error: 'BaseType_t' does not name a type
+  126 |     BaseType_t xOverflowCount;
+      |     ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:127:5: error: 'TickType_t' does not name a type
+  127 |     TickType_t xTimeOnEntering;
+      |     ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:145:5: error: 'TaskFunction_t' does not name a type
+  145 |     TaskFunction_t pvTaskCode;
+      |     ^~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:147:5: error: 'configSTACK_DEPTH_TYPE' does not name a type
+  147 |     configSTACK_DEPTH_TYPE usStackDepth;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:147:5: note: the macro 'configSTACK_DEPTH_TYPE' had not yet been defined
+In file included from /home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:65,
+                 from /home/edgie/esp/read_rotary/main/rotary.cpp:4:
+/home/edgie/esp/esp-idf/components/freertos/esp_additions/include/freertos/FreeRTOSConfig.h:117: note: it was later defined here
+  117 | #define configSTACK_DEPTH_TYPE                         uint32_t
+      | 
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:149:5: error: 'UBaseType_t' does not name a type
+  149 |     UBaseType_t uxPriority;
+      |     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:150:5: error: 'StackType_t' does not name a type
+  150 |     StackType_t * puxStackBuffer;
+      |     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:151:30: error: 'portNUM_CONFIGURABLE_REGIONS' was not declared in this scope
+  151 |     MemoryRegion_t xRegions[ portNUM_CONFIGURABLE_REGIONS ];
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:151:30: note: the macro 'portNUM_CONFIGURABLE_REGIONS' had not yet been defined
+In file included from /home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:71:
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:91: note: it was later defined here
+   91 |     #define portNUM_CONFIGURABLE_REGIONS    1
+      | 
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:163:5: error: 'UBaseType_t' does not name a type
+  163 |     UBaseType_t xTaskNumber;                         /* A number unique to the task. */
+      |     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:165:5: error: 'UBaseType_t' does not name a type
+  165 |     UBaseType_t uxCurrentPriority;                   /* The priority at which the task was running (may be inherited) when the structure was populated. */
+      |     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:166:5: error: 'UBaseType_t' does not name a type
+  166 |     UBaseType_t uxBasePriority;                      /* The priority to which the task will return if the task's current priority has been inherited to avoid unbounded priority inversion when obtaining a mutex.  Only valid if configUSE_MUTEXES is defined as 1 in FreeRTOSConfig.h. */
+      |     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:168:5: error: 'StackType_t' does not name a type
+  168 |     StackType_t * pxStackBase;                       /* Points to the lowest address of the task's stack area. */
+      |     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:169:5: error: 'configSTACK_DEPTH_TYPE' does not name a type
+  169 |     configSTACK_DEPTH_TYPE usStackHighWaterMark;     /* The minimum amount of stack space that has remained for the task since the task was created.  The closer this value is to zero the closer the task has come to overflowing its stack. */
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:169:5: note: the macro 'configSTACK_DEPTH_TYPE' had not yet been defined
+/home/edgie/esp/esp-idf/components/freertos/esp_additions/include/freertos/FreeRTOSConfig.h:117: note: it was later defined here
+  117 | #define configSTACK_DEPTH_TYPE                         uint32_t
+      | 
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:952:72: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  952 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                                                        ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:999:48: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  999 | void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+      |                                                ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1058:24: error: 'TickType_t' does not name a type
+ 1058 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1058:51: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1058 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1129:1: error: 'BaseType_t' does not name a type
+ 1129 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1176:1: error: 'BaseType_t' does not name a type
+ 1176 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1229:1: error: 'UBaseType_t' does not name a type
+ 1229 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1241:1: error: 'UBaseType_t' does not name a type
+ 1241 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1263:48: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1263 | eTaskState eTaskGetState( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1327:20: error: 'BaseType_t' has not been declared
+ 1327 |                    BaseType_t xGetFreeStackSpace,
+      |                    ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1328:40: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1328 |                    eTaskState eState ) PRIVILEGED_FUNCTION;
+      |                                        ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1377:24: error: 'UBaseType_t' has not been declared
+ 1377 |                        UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1377:52: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1377 |                        UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+      |                                                    ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1434:50: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1434 | void vTaskSuspend( TaskHandle_t xTaskToSuspend ) PRIVILEGED_FUNCTION;
+      |                                                  ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1489:48: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1489 | void vTaskResume( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                                                ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1524:1: error: 'BaseType_t' does not name a type
+ 1524 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1568:34: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1568 | void vTaskStartScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1630:32: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1630 | void vTaskEndScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1689:30: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1689 | void vTaskSuspendAll( void ) PRIVILEGED_FUNCTION;
+      |                              ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1749:1: error: 'BaseType_t' does not name a type
+ 1749 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1770:1: error: 'TickType_t' does not name a type
+ 1770 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1792:1: error: 'TickType_t' does not name a type
+ 1792 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1812:1: error: 'UBaseType_t' does not name a type
+ 1812 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1831:51: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1831 | char * pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION;     /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1853:59: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1853 | TaskHandle_t xTaskGetHandle( const char * pcNameToQuery ) PRIVILEGED_FUNCTION;     /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                           ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1886:1: error: 'UBaseType_t' does not name a type
+ 1886 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1919:1: error: 'configSTACK_DEPTH_TYPE' does not name a type
+ 1919 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1919:1: note: the macro 'configSTACK_DEPTH_TYPE' had not yet been defined
+/home/edgie/esp/esp-idf/components/freertos/esp_additions/include/freertos/FreeRTOSConfig.h:117: note: it was later defined here
+  117 | #define configSTACK_DEPTH_TYPE                         uint32_t
+      | 
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1934:53: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1934 | uint8_t * pxTaskGetStackStart( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                     ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2136:1: error: 'BaseType_t' does not name a type
+ 2136 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2146:45: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2146 | TaskHandle_t xTaskGetIdleTaskHandle( void ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2245:1: error: 'UBaseType_t' does not name a type
+ 2245 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2302:40: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2302 | void vTaskList( char * pcWriteBuffer ) PRIVILEGED_FUNCTION;     /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                        ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2364:51: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2364 | void vTaskGetRunTimeStats( char * pcWriteBuffer ) PRIVILEGED_FUNCTION;     /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2400:46: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2400 | uint32_t ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+      |                                              ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2515:1: error: 'BaseType_t' does not name a type
+ 2515 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2679:1: error: 'BaseType_t' does not name a type
+ 2679 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2832:1: error: 'BaseType_t' does not name a type
+ 2832 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3007:37: error: 'UBaseType_t' has not been declared
+ 3007 |                                     UBaseType_t uxIndexToNotify,
+      |                                     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3008:37: error: 'BaseType_t' has not been declared
+ 3008 |                                     BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3008:78: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3008 |                                     BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                                                              ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3116:35: error: 'UBaseType_t' was not declared in this scope
+ 3116 | uint32_t ulTaskGenericNotifyTake( UBaseType_t uxIndexToWaitOn,
+      |                                   ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3117:35: error: 'BaseType_t' was not declared in this scope
+ 3117 |                                   BaseType_t xClearCountOnExit,
+      |                                   ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3118:35: error: 'TickType_t' was not declared in this scope
+ 3118 |                                   TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3118:59: error: expression list treated as compound expression in initializer [-fpermissive]
+ 3118 |                                   TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                           ^
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3185:1: error: 'BaseType_t' does not name a type
+ 3185 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3255:41: error: 'UBaseType_t' has not been declared
+ 3255 |                                         UBaseType_t uxIndexToClear,
+      |                                         ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3256:66: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3256 |                                         uint32_t ulBitsToClear ) PRIVILEGED_FUNCTION;
+      |                                                                  ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3280:58: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3280 | void vTaskSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                                                          ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3369:1: error: 'BaseType_t' does not name a type
+ 3369 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3402:1: error: 'BaseType_t' does not name a type
+ 3402 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3442:47: error: 'BaseType_t' was not declared in this scope
+ 3442 | TaskHandle_t xTaskGetCurrentTaskHandleForCPU( BaseType_t cpuid );
+      |                                               ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3455:44: error: 'UBaseType_t' was not declared in this scope
+ 3455 | TaskHandle_t xTaskGetIdleTaskHandleForCPU( UBaseType_t cpuid );
+      |                                            ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3460:1: error: 'BaseType_t' does not name a type
+ 3460 | BaseType_t xTaskGetAffinity( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3480:1: error: 'BaseType_t' does not name a type
+ 3480 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3528:35: error: 'TickType_t' does not name a type
+ 3528 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3528:61: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3528 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                             ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3530:44: error: 'TickType_t' does not name a type
+ 3530 |                                      const TickType_t xItemValue,
+      |                                            ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3531:44: error: 'TickType_t' does not name a type
+ 3531 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3531:70: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3531 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3545:39: error: 'TickType_t' has not been declared
+ 3545 |                                       TickType_t xTicksToWait,
+      |                                       ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3546:45: error: 'BaseType_t' does not name a type
+ 3546 |                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3546:76: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3546 |                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                                                            ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3592:1: error: 'BaseType_t' does not name a type
+ 3592 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3594:47: error: 'TickType_t' does not name a type
+ 3594 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3594:71: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3594 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                                                       ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3604:1: error: 'portDONT_DISCARD' does not name a type
+ 3604 | portDONT_DISCARD void vTaskSwitchContext( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3604:1: note: the macro 'portDONT_DISCARD' had not yet been defined
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:875: note: it was later defined here
+  875 |     #define portDONT_DISCARD
+      | 
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3610:1: error: 'TickType_t' does not name a type
+ 3610 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3615:48: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3615 | TaskHandle_t xTaskGetCurrentTaskHandle( void ) PRIVILEGED_FUNCTION;
+      |                                                ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3621:31: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3621 | void vTaskMissedYield( void ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3627:1: error: 'BaseType_t' does not name a type
+ 3627 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3633:1: error: 'BaseType_t' does not name a type
+ 3633 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3639:1: error: 'BaseType_t' does not name a type
+ 3639 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3650:43: error: 'UBaseType_t' has not been declared
+ 3650 |                                           UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3650:86: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3650 |                                           UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;
+      |                                                                                      ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3655:1: error: 'UBaseType_t' does not name a type
+ 3655 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3662:32: error: 'UBaseType_t' does not name a type
+ 3662 |                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3662:55: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3662 |                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3672:27: error: 'TickType_t' does not name a type
+ 3672 | void vTaskStepTick( const TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+      |                           ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3672:53: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3672 | void vTaskStepTick( const TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+      |                                                     ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3688:54: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3688 | eSleepModeStatus eTaskConfirmSleepModeStatus( void ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3694:52: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3694 | TaskHandle_t pvTaskIncrementMutexHeldCount( void ) PRIVILEGED_FUNCTION;
+      |                                                    ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3700:66: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3700 | void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                                                                  ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:694:1: error: 'BaseType_t' does not name a type
+  694 | BaseType_t xQueueGenericSend( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:796:1: error: 'BaseType_t' does not name a type
+  796 | BaseType_t xQueuePeek( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:836:1: error: 'BaseType_t' does not name a type
+  836 | BaseType_t xQueuePeekFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:933:1: error: 'BaseType_t' does not name a type
+  933 | BaseType_t xQueueReceive( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:956:1: error: 'UBaseType_t' does not name a type
+  956 | UBaseType_t uxQueueMessagesWaiting( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:979:1: error: 'UBaseType_t' does not name a type
+  979 | UBaseType_t uxQueueSpacesAvailable( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:999:43: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  999 | void vQueueDelete( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1404:1: error: 'BaseType_t' does not name a type
+ 1404 | BaseType_t xQueueGenericSendFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1408:1: error: 'BaseType_t' does not name a type
+ 1408 | BaseType_t xQueueGiveFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1502:1: error: 'BaseType_t' does not name a type
+ 1502 | BaseType_t xQueueReceiveFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1510:1: error: 'BaseType_t' does not name a type
+ 1510 | BaseType_t xQueueIsQueueEmptyFromISR( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1511:1: error: 'BaseType_t' does not name a type
+ 1511 | BaseType_t xQueueIsQueueFullFromISR( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1512:1: error: 'UBaseType_t' does not name a type
+ 1512 | UBaseType_t uxQueueMessagesWaitingFromISR( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1525:1: error: 'BaseType_t' does not name a type
+ 1525 | BaseType_t xQueueCRSendFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1528:1: error: 'BaseType_t' does not name a type
+ 1528 | BaseType_t xQueueCRReceiveFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1531:1: error: 'BaseType_t' does not name a type
+ 1531 | BaseType_t xQueueCRSend( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1534:1: error: 'BaseType_t' does not name a type
+ 1534 | BaseType_t xQueueCRReceive( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1543:62: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1543 | QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType ) PRIVILEGED_FUNCTION;
+      |                                                              ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1545:40: error: 'StaticQueue_t' has not been declared
+ 1545 |                                        StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+      |                                        ^~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1545:72: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1545 |                                        StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+      |                                                                        ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1546:52: error: 'UBaseType_t' does not name a type
+ 1546 | QueueHandle_t xQueueCreateCountingSemaphore( const UBaseType_t uxMaxCount,
+      |                                                    ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1547:52: error: 'UBaseType_t' does not name a type
+ 1547 |                                              const UBaseType_t uxInitialCount ) PRIVILEGED_FUNCTION;
+      |                                                    ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1547:81: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1547 |                                              const UBaseType_t uxInitialCount ) PRIVILEGED_FUNCTION;
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1548:58: error: 'UBaseType_t' does not name a type
+ 1548 | QueueHandle_t xQueueCreateCountingSemaphoreStatic( const UBaseType_t uxMaxCount,
+      |                                                          ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1549:58: error: 'UBaseType_t' does not name a type
+ 1549 |                                                    const UBaseType_t uxInitialCount,
+      |                                                          ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1550:52: error: 'StaticQueue_t' has not been declared
+ 1550 |                                                    StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+      |                                                    ^~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1550:84: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1550 |                                                    StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+      |                                                                                    ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1551:1: error: 'BaseType_t' does not name a type
+ 1551 | BaseType_t xQueueSemaphoreTake( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1553:63: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1553 | TaskHandle_t xQueueGetMutexHolder( QueueHandle_t xSemaphore ) PRIVILEGED_FUNCTION;
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1554:70: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1554 | TaskHandle_t xQueueGetMutexHolderFromISR( QueueHandle_t xSemaphore ) PRIVILEGED_FUNCTION;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1560:1: error: 'BaseType_t' does not name a type
+ 1560 | BaseType_t xQueueTakeMutexRecursive( QueueHandle_t xMutex,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1562:1: error: 'BaseType_t' does not name a type
+ 1562 | BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1700:41: error: 'UBaseType_t' does not name a type
+ 1700 | QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) PRIVILEGED_FUNCTION;
+      |                                         ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1700:74: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1700 | QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) PRIVILEGED_FUNCTION;
+      |                                                                          ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1724:1: error: 'BaseType_t' does not name a type
+ 1724 | BaseType_t xQueueAddToSet( QueueSetMemberHandle_t xQueueOrSemaphore,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1744:1: error: 'BaseType_t' does not name a type
+ 1744 | BaseType_t xQueueRemoveFromSet( QueueSetMemberHandle_t xQueueOrSemaphore,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1782:51: error: 'TickType_t' does not name a type
+ 1782 |                                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1782:77: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1782 |                                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                                             ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1787:81: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1787 | QueueSetMemberHandle_t xQueueSelectFromSetFromISR( QueueSetHandle_t xQueueSet ) PRIVILEGED_FUNCTION;
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1793:38: error: 'TickType_t' has not been declared
+ 1793 |                                      TickType_t xTicksToWait,
+      |                                      ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1794:44: error: 'BaseType_t' does not name a type
+ 1794 |                                      const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1794:75: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1794 |                                      const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                                                           ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1795:1: error: 'BaseType_t' does not name a type
+ 1795 | BaseType_t xQueueGenericReset( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1798:28: error: 'UBaseType_t' has not been declared
+ 1798 |                            UBaseType_t uxQueueNumber ) PRIVILEGED_FUNCTION;
+      |                            ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1798:56: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1798 |                            UBaseType_t uxQueueNumber ) PRIVILEGED_FUNCTION;
+      |                                                        ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1799:1: error: 'UBaseType_t' does not name a type
+ 1799 | UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1800:53: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1800 | uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      |                                                     ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/read_rotary/main/rotary.cpp: In function 'bool example_pcnt_on_reach(pcnt_unit_handle_t, const pcnt_watch_event_data_t*, void*)':
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1321:5: error: 'xQueueGenericSendFromISR' was not declared in this scope; did you mean 'xQueueSendFromISR'?
+ 1321 |     xQueueGenericSendFromISR( ( xQueue ), ( pvItemToQueue ), ( pxHigherPriorityTaskWoken ), queueSEND_TO_BACK )
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/read_rotary/main/rotary.cpp:29:5: note: in expansion of macro 'xQueueSendFromISR'
+   29 |     xQueueSendFromISR(queue, &(edata->watch_point_value), &high_task_wakeup);
+      |     ^~~~~~~~~~~~~~~~~
+/home/edgie/esp/read_rotary/main/rotary.cpp: In function 'void initRot()':
+/home/edgie/esp/read_rotary/main/rotary.cpp:40:5: warning: missing initializer for member 'pcnt_unit_config_t::flags' [-Wmissing-field-initializers]
+   40 |     };
+      |     ^
+/home/edgie/esp/read_rotary/main/rotary.cpp:56:5: warning: missing initializer for member 'pcnt_chan_config_t::flags' [-Wmissing-field-initializers]
+   56 |     };
+      |     ^
+/home/edgie/esp/read_rotary/main/rotary.cpp:62:5: warning: missing initializer for member 'pcnt_chan_config_t::flags' [-Wmissing-field-initializers]
+   62 |     };
+      |     ^
+/home/edgie/esp/read_rotary/main/rotary.cpp:82:13: error: 'xQueueCreate' was not declared in this scope; did you mean 'xQueueReset'?
+   82 |     queue = xQueueCreate(10, sizeof(int));
+      |             ^~~~~~~~~~~~
+      |             xQueueReset
+[3/9] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/read_rotary.cpp.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/read_rotary.cpp.obj 
+/home/edgie/.espressif/tools/xtensa-esp32s2-elf/esp-12.2.0_20230208/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-g++ -DESP_PLATFORM -DIDF_VER=\"v5.1-dev-4264-g81e1e65995\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DUNITY_INCLUDE_CONFIG_H -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/edgie/esp/read_rotary/build/config -I/home/edgie/esp/read_rotary/main -I/home/edgie/esp/esp-idf/components/newlib/platform_include -I/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/edgie/esp/esp-idf/components/freertos/esp_additions/include/freertos -I/home/edgie/esp/esp-idf/components/freertos/esp_additions/include -I/home/edgie/esp/esp-idf/components/freertos/esp_additions/arch/xtensa/include -I/home/edgie/esp/esp-idf/components/esp_hw_support/include -I/home/edgie/esp/esp-idf/components/esp_hw_support/include/soc -I/home/edgie/esp/esp-idf/components/esp_hw_support/include/soc/esp32s2 -I/home/edgie/esp/esp-idf/components/esp_hw_support/port/esp32s2/. -I/home/edgie/esp/esp-idf/components/esp_hw_support/port/esp32s2/private_include -I/home/edgie/esp/esp-idf/components/heap/include -I/home/edgie/esp/esp-idf/components/log/include -I/home/edgie/esp/esp-idf/components/soc/include -I/home/edgie/esp/esp-idf/components/soc/esp32s2 -I/home/edgie/esp/esp-idf/components/soc/esp32s2/include -I/home/edgie/esp/esp-idf/components/hal/esp32s2/include -I/home/edgie/esp/esp-idf/components/hal/include -I/home/edgie/esp/esp-idf/components/hal/platform_port/include -I/home/edgie/esp/esp-idf/components/esp_rom/include -I/home/edgie/esp/esp-idf/components/esp_rom/include/esp32s2 -I/home/edgie/esp/esp-idf/components/esp_rom/esp32s2 -I/home/edgie/esp/esp-idf/components/esp_common/include -I/home/edgie/esp/esp-idf/components/esp_system/include -I/home/edgie/esp/esp-idf/components/esp_system/port/soc -I/home/edgie/esp/esp-idf/components/esp_system/port/include/private -I/home/edgie/esp/esp-idf/components/xtensa/include -I/home/edgie/esp/esp-idf/components/xtensa/esp32s2/include -I/home/edgie/esp/esp-idf/components/lwip/include -I/home/edgie/esp/esp-idf/components/lwip/include/apps -I/home/edgie/esp/esp-idf/components/lwip/include/apps/sntp -I/home/edgie/esp/esp-idf/components/lwip/lwip/src/include -I/home/edgie/esp/esp-idf/components/lwip/port/include -I/home/edgie/esp/esp-idf/components/lwip/port/freertos/include -I/home/edgie/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/edgie/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/edgie/esp/esp-idf/components/esp_ringbuf/include -I/home/edgie/esp/esp-idf/components/efuse/include -I/home/edgie/esp/esp-idf/components/efuse/esp32s2/include -I/home/edgie/esp/esp-idf/components/driver/include -I/home/edgie/esp/esp-idf/components/driver/deprecated -I/home/edgie/esp/esp-idf/components/driver/analog_comparator/include -I/home/edgie/esp/esp-idf/components/driver/dac/include -I/home/edgie/esp/esp-idf/components/driver/gpio/include -I/home/edgie/esp/esp-idf/components/driver/gptimer/include -I/home/edgie/esp/esp-idf/components/driver/i2c/include -I/home/edgie/esp/esp-idf/components/driver/i2s/include -I/home/edgie/esp/esp-idf/components/driver/ledc/include -I/home/edgie/esp/esp-idf/components/driver/mcpwm/include -I/home/edgie/esp/esp-idf/components/driver/parlio/include -I/home/edgie/esp/esp-idf/components/driver/pcnt/include -I/home/edgie/esp/esp-idf/components/driver/rmt/include -I/home/edgie/esp/esp-idf/components/driver/sdio_slave/include -I/home/edgie/esp/esp-idf/components/driver/sdmmc/include -I/home/edgie/esp/esp-idf/components/driver/sigma_delta/include -I/home/edgie/esp/esp-idf/components/driver/spi/include -I/home/edgie/esp/esp-idf/components/driver/temperature_sensor/include -I/home/edgie/esp/esp-idf/components/driver/touch_sensor/include -I/home/edgie/esp/esp-idf/components/driver/twai/include -I/home/edgie/esp/esp-idf/components/driver/uart/include -I/home/edgie/esp/esp-idf/components/driver/usb_serial_jtag/include -I/home/edgie/esp/esp-idf/components/driver/touch_sensor/esp32s2/include -I/home/edgie/esp/esp-idf/components/esp_pm/include -I/home/edgie/esp/esp-idf/components/mbedtls/port/include -I/home/edgie/esp/esp-idf/components/mbedtls/mbedtls/include -I/home/edgie/esp/esp-idf/components/mbedtls/mbedtls/library -I/home/edgie/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/edgie/esp/esp-idf/components/esp_app_format/include -I/home/edgie/esp/esp-idf/components/bootloader_support/include -I/home/edgie/esp/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/edgie/esp/esp-idf/components/esp_partition/include -I/home/edgie/esp/esp-idf/components/app_update/include -I/home/edgie/esp/esp-idf/components/esp_mm/include -I/home/edgie/esp/esp-idf/components/spi_flash/include -I/home/edgie/esp/esp-idf/components/pthread/include -I/home/edgie/esp/esp-idf/components/esp_timer/include -I/home/edgie/esp/esp-idf/components/app_trace/include -I/home/edgie/esp/esp-idf/components/esp_event/include -I/home/edgie/esp/esp-idf/components/nvs_flash/include -I/home/edgie/esp/esp-idf/components/esp_phy/include -I/home/edgie/esp/esp-idf/components/esp_phy/esp32s2/include -I/home/edgie/esp/esp-idf/components/vfs/include -I/home/edgie/esp/esp-idf/components/esp_netif/include -I/home/edgie/esp/esp-idf/components/wpa_supplicant/include -I/home/edgie/esp/esp-idf/components/wpa_supplicant/port/include -I/home/edgie/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/edgie/esp/esp-idf/components/esp_coex/include -I/home/edgie/esp/esp-idf/components/esp_wifi/include -I/home/edgie/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/edgie/esp/esp-idf/components/unity/include -I/home/edgie/esp/esp-idf/components/unity/unity/src -I/home/edgie/esp/esp-idf/components/cmock/CMock/src -I/home/edgie/esp/esp-idf/components/console -I/home/edgie/esp/esp-idf/components/http_parser -I/home/edgie/esp/esp-idf/components/esp-tls -I/home/edgie/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/home/edgie/esp/esp-idf/components/esp_adc/include -I/home/edgie/esp/esp-idf/components/esp_adc/interface -I/home/edgie/esp/esp-idf/components/esp_adc/esp32s2/include -I/home/edgie/esp/esp-idf/components/esp_adc/deprecated/include -I/home/edgie/esp/esp-idf/components/esp_eth/include -I/home/edgie/esp/esp-idf/components/esp_gdbstub/include -I/home/edgie/esp/esp-idf/components/esp_gdbstub/xtensa -I/home/edgie/esp/esp-idf/components/esp_gdbstub/esp32s2 -I/home/edgie/esp/esp-idf/components/esp_hid/include -I/home/edgie/esp/esp-idf/components/tcp_transport/include -I/home/edgie/esp/esp-idf/components/esp_http_client/include -I/home/edgie/esp/esp-idf/components/esp_http_server/include -I/home/edgie/esp/esp-idf/components/esp_https_ota/include -I/home/edgie/esp/esp-idf/components/esp_lcd/include -I/home/edgie/esp/esp-idf/components/esp_lcd/interface -I/home/edgie/esp/esp-idf/components/protobuf-c/protobuf-c -I/home/edgie/esp/esp-idf/components/protocomm/include/common -I/home/edgie/esp/esp-idf/components/protocomm/include/security -I/home/edgie/esp/esp-idf/components/protocomm/include/transports -I/home/edgie/esp/esp-idf/components/esp_local_ctrl/include -I/home/edgie/esp/esp-idf/components/esp_psram/include -I/home/edgie/esp/esp-idf/components/espcoredump/include -I/home/edgie/esp/esp-idf/components/espcoredump/include/port/xtensa -I/home/edgie/esp/esp-idf/components/wear_levelling/include -I/home/edgie/esp/esp-idf/components/sdmmc/include -I/home/edgie/esp/esp-idf/components/fatfs/diskio -I/home/edgie/esp/esp-idf/components/fatfs/vfs -I/home/edgie/esp/esp-idf/components/fatfs/src -I/home/edgie/esp/esp-idf/components/idf_test/include -I/home/edgie/esp/esp-idf/components/idf_test/include/esp32s2 -I/home/edgie/esp/esp-idf/components/ieee802154/include -I/home/edgie/esp/esp-idf/components/json/cJSON -I/home/edgie/esp/esp-idf/components/mqtt/esp-mqtt/include -I/home/edgie/esp/esp-idf/components/perfmon/include -I/home/edgie/esp/esp-idf/components/spiffs/include -I/home/edgie/esp/esp-idf/components/touch_element/include -I/home/edgie/esp/esp-idf/components/ulp/ulp_common/include -I/home/edgie/esp/esp-idf/components/ulp/ulp_common/include/esp32s2 -I/home/edgie/esp/esp-idf/components/usb/include -I/home/edgie/esp/esp-idf/components/wifi_provisioning/include -mlongcalls  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=/home/edgie/esp/read_rotary=. -fmacro-prefix-map=/home/edgie/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu++20 -fno-exceptions -fno-rtti -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/read_rotary.cpp.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/read_rotary.cpp.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/read_rotary.cpp.obj -c /home/edgie/esp/read_rotary/main/read_rotary.cpp
+In file included from /home/edgie/esp/read_rotary/main/rotary.cpp:2,
+                 from /home/edgie/esp/read_rotary/main/read_rotary.cpp:14:
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:40:6: error: #error "include FreeRTOS.h" must appear in source files before "include queue.h"
+   40 |     #error "include FreeRTOS.h" must appear in source files before "include queue.h"
+      |      ^~~~~
+In file included from /home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:49:
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:40:6: error: #error "include FreeRTOS.h must appear in source files before include task.h"
+   40 |     #error "include FreeRTOS.h must appear in source files before include task.h"
+      |      ^~~~~
+In file included from /home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:43:
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:67:6: error: #error "FreeRTOS.h must be included before list.h"
+   67 |     #error "FreeRTOS.h must be included before list.h"
+      |      ^~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:152:25: error: 'TickType_t' does not name a type
+  152 |     configLIST_VOLATILE TickType_t xItemValue;              /*< The value being listed.  In most cases this is used to sort the list in descending order. */
+      |                         ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:164:25: error: 'TickType_t' does not name a type
+  164 |     configLIST_VOLATILE TickType_t xItemValue;
+      |                         ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:176:14: error: 'UBaseType_t' does not name a type
+  176 |     volatile UBaseType_t uxNumberOfItems;
+      |              ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:354:47: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  354 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:365:55: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  365 | void vListInitialiseItem( ListItem_t * const pxItem ) PRIVILEGED_FUNCTION;
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:379:54: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  379 |                   ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:401:57: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  401 |                      ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                         ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:416:1: error: 'UBaseType_t' does not name a type
+  416 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:96:9: error: ISO C++ forbids declaration of 'BaseType_t' with no type [-fpermissive]
+   96 | typedef BaseType_t (* TaskHookFunction_t)( void * );
+      |         ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:96:9: error: typedef 'BaseType_t' is initialized (use 'decltype' instead)
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:96:23: error: 'TaskHookFunction_t' was not declared in this scope
+   96 | typedef BaseType_t (* TaskHookFunction_t)( void * );
+      |                       ^~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:126:5: error: 'BaseType_t' does not name a type
+  126 |     BaseType_t xOverflowCount;
+      |     ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:127:5: error: 'TickType_t' does not name a type
+  127 |     TickType_t xTimeOnEntering;
+      |     ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:145:5: error: 'TaskFunction_t' does not name a type
+  145 |     TaskFunction_t pvTaskCode;
+      |     ^~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:147:5: error: 'configSTACK_DEPTH_TYPE' does not name a type
+  147 |     configSTACK_DEPTH_TYPE usStackDepth;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:147:5: note: the macro 'configSTACK_DEPTH_TYPE' had not yet been defined
+In file included from /home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:65,
+                 from /home/edgie/esp/read_rotary/main/rotary.cpp:4:
+/home/edgie/esp/esp-idf/components/freertos/esp_additions/include/freertos/FreeRTOSConfig.h:117: note: it was later defined here
+  117 | #define configSTACK_DEPTH_TYPE                         uint32_t
+      | 
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:149:5: error: 'UBaseType_t' does not name a type
+  149 |     UBaseType_t uxPriority;
+      |     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:150:5: error: 'StackType_t' does not name a type
+  150 |     StackType_t * puxStackBuffer;
+      |     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:151:30: error: 'portNUM_CONFIGURABLE_REGIONS' was not declared in this scope
+  151 |     MemoryRegion_t xRegions[ portNUM_CONFIGURABLE_REGIONS ];
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:151:30: note: the macro 'portNUM_CONFIGURABLE_REGIONS' had not yet been defined
+In file included from /home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:71:
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:91: note: it was later defined here
+   91 |     #define portNUM_CONFIGURABLE_REGIONS    1
+      | 
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:163:5: error: 'UBaseType_t' does not name a type
+  163 |     UBaseType_t xTaskNumber;                         /* A number unique to the task. */
+      |     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:165:5: error: 'UBaseType_t' does not name a type
+  165 |     UBaseType_t uxCurrentPriority;                   /* The priority at which the task was running (may be inherited) when the structure was populated. */
+      |     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:166:5: error: 'UBaseType_t' does not name a type
+  166 |     UBaseType_t uxBasePriority;                      /* The priority to which the task will return if the task's current priority has been inherited to avoid unbounded priority inversion when obtaining a mutex.  Only valid if configUSE_MUTEXES is defined as 1 in FreeRTOSConfig.h. */
+      |     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:168:5: error: 'StackType_t' does not name a type
+  168 |     StackType_t * pxStackBase;                       /* Points to the lowest address of the task's stack area. */
+      |     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:169:5: error: 'configSTACK_DEPTH_TYPE' does not name a type
+  169 |     configSTACK_DEPTH_TYPE usStackHighWaterMark;     /* The minimum amount of stack space that has remained for the task since the task was created.  The closer this value is to zero the closer the task has come to overflowing its stack. */
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:169:5: note: the macro 'configSTACK_DEPTH_TYPE' had not yet been defined
+/home/edgie/esp/esp-idf/components/freertos/esp_additions/include/freertos/FreeRTOSConfig.h:117: note: it was later defined here
+  117 | #define configSTACK_DEPTH_TYPE                         uint32_t
+      | 
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:952:72: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  952 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                                                        ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:999:48: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  999 | void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+      |                                                ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1058:24: error: 'TickType_t' does not name a type
+ 1058 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1058:51: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1058 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1129:1: error: 'BaseType_t' does not name a type
+ 1129 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1176:1: error: 'BaseType_t' does not name a type
+ 1176 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1229:1: error: 'UBaseType_t' does not name a type
+ 1229 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1241:1: error: 'UBaseType_t' does not name a type
+ 1241 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1263:48: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1263 | eTaskState eTaskGetState( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1327:20: error: 'BaseType_t' has not been declared
+ 1327 |                    BaseType_t xGetFreeStackSpace,
+      |                    ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1328:40: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1328 |                    eTaskState eState ) PRIVILEGED_FUNCTION;
+      |                                        ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1377:24: error: 'UBaseType_t' has not been declared
+ 1377 |                        UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1377:52: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1377 |                        UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+      |                                                    ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1434:50: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1434 | void vTaskSuspend( TaskHandle_t xTaskToSuspend ) PRIVILEGED_FUNCTION;
+      |                                                  ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1489:48: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1489 | void vTaskResume( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                                                ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1524:1: error: 'BaseType_t' does not name a type
+ 1524 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1568:34: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1568 | void vTaskStartScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1630:32: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1630 | void vTaskEndScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1689:30: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1689 | void vTaskSuspendAll( void ) PRIVILEGED_FUNCTION;
+      |                              ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1749:1: error: 'BaseType_t' does not name a type
+ 1749 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1770:1: error: 'TickType_t' does not name a type
+ 1770 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1792:1: error: 'TickType_t' does not name a type
+ 1792 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1812:1: error: 'UBaseType_t' does not name a type
+ 1812 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1831:51: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1831 | char * pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION;     /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1853:59: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1853 | TaskHandle_t xTaskGetHandle( const char * pcNameToQuery ) PRIVILEGED_FUNCTION;     /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                           ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1886:1: error: 'UBaseType_t' does not name a type
+ 1886 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1919:1: error: 'configSTACK_DEPTH_TYPE' does not name a type
+ 1919 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1919:1: note: the macro 'configSTACK_DEPTH_TYPE' had not yet been defined
+/home/edgie/esp/esp-idf/components/freertos/esp_additions/include/freertos/FreeRTOSConfig.h:117: note: it was later defined here
+  117 | #define configSTACK_DEPTH_TYPE                         uint32_t
+      | 
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1934:53: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1934 | uint8_t * pxTaskGetStackStart( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                     ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2136:1: error: 'BaseType_t' does not name a type
+ 2136 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2146:45: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2146 | TaskHandle_t xTaskGetIdleTaskHandle( void ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2245:1: error: 'UBaseType_t' does not name a type
+ 2245 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2302:40: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2302 | void vTaskList( char * pcWriteBuffer ) PRIVILEGED_FUNCTION;     /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                        ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2364:51: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2364 | void vTaskGetRunTimeStats( char * pcWriteBuffer ) PRIVILEGED_FUNCTION;     /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2400:46: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2400 | uint32_t ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+      |                                              ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2515:1: error: 'BaseType_t' does not name a type
+ 2515 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2679:1: error: 'BaseType_t' does not name a type
+ 2679 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2832:1: error: 'BaseType_t' does not name a type
+ 2832 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3007:37: error: 'UBaseType_t' has not been declared
+ 3007 |                                     UBaseType_t uxIndexToNotify,
+      |                                     ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3008:37: error: 'BaseType_t' has not been declared
+ 3008 |                                     BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3008:78: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3008 |                                     BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                                                              ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3116:35: error: 'UBaseType_t' was not declared in this scope
+ 3116 | uint32_t ulTaskGenericNotifyTake( UBaseType_t uxIndexToWaitOn,
+      |                                   ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3117:35: error: 'BaseType_t' was not declared in this scope
+ 3117 |                                   BaseType_t xClearCountOnExit,
+      |                                   ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3118:35: error: 'TickType_t' was not declared in this scope
+ 3118 |                                   TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3118:59: error: expression list treated as compound expression in initializer [-fpermissive]
+ 3118 |                                   TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                           ^
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3185:1: error: 'BaseType_t' does not name a type
+ 3185 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3255:41: error: 'UBaseType_t' has not been declared
+ 3255 |                                         UBaseType_t uxIndexToClear,
+      |                                         ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3256:66: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3256 |                                         uint32_t ulBitsToClear ) PRIVILEGED_FUNCTION;
+      |                                                                  ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3280:58: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3280 | void vTaskSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                                                          ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3369:1: error: 'BaseType_t' does not name a type
+ 3369 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3402:1: error: 'BaseType_t' does not name a type
+ 3402 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3442:47: error: 'BaseType_t' was not declared in this scope
+ 3442 | TaskHandle_t xTaskGetCurrentTaskHandleForCPU( BaseType_t cpuid );
+      |                                               ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3455:44: error: 'UBaseType_t' was not declared in this scope
+ 3455 | TaskHandle_t xTaskGetIdleTaskHandleForCPU( UBaseType_t cpuid );
+      |                                            ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3460:1: error: 'BaseType_t' does not name a type
+ 3460 | BaseType_t xTaskGetAffinity( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3480:1: error: 'BaseType_t' does not name a type
+ 3480 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3528:35: error: 'TickType_t' does not name a type
+ 3528 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3528:61: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3528 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                             ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3530:44: error: 'TickType_t' does not name a type
+ 3530 |                                      const TickType_t xItemValue,
+      |                                            ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3531:44: error: 'TickType_t' does not name a type
+ 3531 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3531:70: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3531 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3545:39: error: 'TickType_t' has not been declared
+ 3545 |                                       TickType_t xTicksToWait,
+      |                                       ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3546:45: error: 'BaseType_t' does not name a type
+ 3546 |                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3546:76: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3546 |                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                                                            ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3592:1: error: 'BaseType_t' does not name a type
+ 3592 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3594:47: error: 'TickType_t' does not name a type
+ 3594 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3594:71: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3594 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                                                       ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3604:1: error: 'portDONT_DISCARD' does not name a type
+ 3604 | portDONT_DISCARD void vTaskSwitchContext( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3604:1: note: the macro 'portDONT_DISCARD' had not yet been defined
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:875: note: it was later defined here
+  875 |     #define portDONT_DISCARD
+      | 
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3610:1: error: 'TickType_t' does not name a type
+ 3610 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3615:48: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3615 | TaskHandle_t xTaskGetCurrentTaskHandle( void ) PRIVILEGED_FUNCTION;
+      |                                                ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3621:31: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3621 | void vTaskMissedYield( void ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3627:1: error: 'BaseType_t' does not name a type
+ 3627 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3633:1: error: 'BaseType_t' does not name a type
+ 3633 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3639:1: error: 'BaseType_t' does not name a type
+ 3639 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3650:43: error: 'UBaseType_t' has not been declared
+ 3650 |                                           UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3650:86: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3650 |                                           UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;
+      |                                                                                      ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3655:1: error: 'UBaseType_t' does not name a type
+ 3655 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3662:32: error: 'UBaseType_t' does not name a type
+ 3662 |                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3662:55: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3662 |                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3672:27: error: 'TickType_t' does not name a type
+ 3672 | void vTaskStepTick( const TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+      |                           ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3672:53: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3672 | void vTaskStepTick( const TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+      |                                                     ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3688:54: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3688 | eSleepModeStatus eTaskConfirmSleepModeStatus( void ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3694:52: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3694 | TaskHandle_t pvTaskIncrementMutexHeldCount( void ) PRIVILEGED_FUNCTION;
+      |                                                    ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3700:66: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 3700 | void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                                                                  ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:694:1: error: 'BaseType_t' does not name a type
+  694 | BaseType_t xQueueGenericSend( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:796:1: error: 'BaseType_t' does not name a type
+  796 | BaseType_t xQueuePeek( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:836:1: error: 'BaseType_t' does not name a type
+  836 | BaseType_t xQueuePeekFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:933:1: error: 'BaseType_t' does not name a type
+  933 | BaseType_t xQueueReceive( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:956:1: error: 'UBaseType_t' does not name a type
+  956 | UBaseType_t uxQueueMessagesWaiting( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:979:1: error: 'UBaseType_t' does not name a type
+  979 | UBaseType_t uxQueueSpacesAvailable( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:999:43: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  999 | void vQueueDelete( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1404:1: error: 'BaseType_t' does not name a type
+ 1404 | BaseType_t xQueueGenericSendFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1408:1: error: 'BaseType_t' does not name a type
+ 1408 | BaseType_t xQueueGiveFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1502:1: error: 'BaseType_t' does not name a type
+ 1502 | BaseType_t xQueueReceiveFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1510:1: error: 'BaseType_t' does not name a type
+ 1510 | BaseType_t xQueueIsQueueEmptyFromISR( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1511:1: error: 'BaseType_t' does not name a type
+ 1511 | BaseType_t xQueueIsQueueFullFromISR( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1512:1: error: 'UBaseType_t' does not name a type
+ 1512 | UBaseType_t uxQueueMessagesWaitingFromISR( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1525:1: error: 'BaseType_t' does not name a type
+ 1525 | BaseType_t xQueueCRSendFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1528:1: error: 'BaseType_t' does not name a type
+ 1528 | BaseType_t xQueueCRReceiveFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1531:1: error: 'BaseType_t' does not name a type
+ 1531 | BaseType_t xQueueCRSend( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1534:1: error: 'BaseType_t' does not name a type
+ 1534 | BaseType_t xQueueCRReceive( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1543:62: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1543 | QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType ) PRIVILEGED_FUNCTION;
+      |                                                              ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1545:40: error: 'StaticQueue_t' has not been declared
+ 1545 |                                        StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+      |                                        ^~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1545:72: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1545 |                                        StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+      |                                                                        ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1546:52: error: 'UBaseType_t' does not name a type
+ 1546 | QueueHandle_t xQueueCreateCountingSemaphore( const UBaseType_t uxMaxCount,
+      |                                                    ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1547:52: error: 'UBaseType_t' does not name a type
+ 1547 |                                              const UBaseType_t uxInitialCount ) PRIVILEGED_FUNCTION;
+      |                                                    ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1547:81: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1547 |                                              const UBaseType_t uxInitialCount ) PRIVILEGED_FUNCTION;
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1548:58: error: 'UBaseType_t' does not name a type
+ 1548 | QueueHandle_t xQueueCreateCountingSemaphoreStatic( const UBaseType_t uxMaxCount,
+      |                                                          ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1549:58: error: 'UBaseType_t' does not name a type
+ 1549 |                                                    const UBaseType_t uxInitialCount,
+      |                                                          ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1550:52: error: 'StaticQueue_t' has not been declared
+ 1550 |                                                    StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+      |                                                    ^~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1550:84: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1550 |                                                    StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+      |                                                                                    ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1551:1: error: 'BaseType_t' does not name a type
+ 1551 | BaseType_t xQueueSemaphoreTake( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1553:63: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1553 | TaskHandle_t xQueueGetMutexHolder( QueueHandle_t xSemaphore ) PRIVILEGED_FUNCTION;
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1554:70: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1554 | TaskHandle_t xQueueGetMutexHolderFromISR( QueueHandle_t xSemaphore ) PRIVILEGED_FUNCTION;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1560:1: error: 'BaseType_t' does not name a type
+ 1560 | BaseType_t xQueueTakeMutexRecursive( QueueHandle_t xMutex,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1562:1: error: 'BaseType_t' does not name a type
+ 1562 | BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1700:41: error: 'UBaseType_t' does not name a type
+ 1700 | QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) PRIVILEGED_FUNCTION;
+      |                                         ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1700:74: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1700 | QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) PRIVILEGED_FUNCTION;
+      |                                                                          ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1724:1: error: 'BaseType_t' does not name a type
+ 1724 | BaseType_t xQueueAddToSet( QueueSetMemberHandle_t xQueueOrSemaphore,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1744:1: error: 'BaseType_t' does not name a type
+ 1744 | BaseType_t xQueueRemoveFromSet( QueueSetMemberHandle_t xQueueOrSemaphore,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1782:51: error: 'TickType_t' does not name a type
+ 1782 |                                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1782:77: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1782 |                                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                                             ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1787:81: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1787 | QueueSetMemberHandle_t xQueueSelectFromSetFromISR( QueueSetHandle_t xQueueSet ) PRIVILEGED_FUNCTION;
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1793:38: error: 'TickType_t' has not been declared
+ 1793 |                                      TickType_t xTicksToWait,
+      |                                      ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1794:44: error: 'BaseType_t' does not name a type
+ 1794 |                                      const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1794:75: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1794 |                                      const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                                                           ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1795:1: error: 'BaseType_t' does not name a type
+ 1795 | BaseType_t xQueueGenericReset( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1798:28: error: 'UBaseType_t' has not been declared
+ 1798 |                            UBaseType_t uxQueueNumber ) PRIVILEGED_FUNCTION;
+      |                            ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1798:56: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1798 |                            UBaseType_t uxQueueNumber ) PRIVILEGED_FUNCTION;
+      |                                                        ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1799:1: error: 'UBaseType_t' does not name a type
+ 1799 | UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1800:53: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1800 | uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      |                                                     ^~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/read_rotary/main/rotary.cpp: In function 'bool example_pcnt_on_reach(pcnt_unit_handle_t, const pcnt_watch_event_data_t*, void*)':
+/home/edgie/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1321:5: error: 'xQueueGenericSendFromISR' was not declared in this scope; did you mean 'xQueueSendFromISR'?
+ 1321 |     xQueueGenericSendFromISR( ( xQueue ), ( pvItemToQueue ), ( pxHigherPriorityTaskWoken ), queueSEND_TO_BACK )
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/edgie/esp/read_rotary/main/rotary.cpp:29:5: note: in expansion of macro 'xQueueSendFromISR'
+   29 |     xQueueSendFromISR(queue, &(edata->watch_point_value), &high_task_wakeup);
+      |     ^~~~~~~~~~~~~~~~~
+/home/edgie/esp/read_rotary/main/rotary.cpp: In function 'void initRot()':
+/home/edgie/esp/read_rotary/main/rotary.cpp:40:5: warning: missing initializer for member 'pcnt_unit_config_t::flags' [-Wmissing-field-initializers]
+   40 |     };
+      |     ^
+/home/edgie/esp/read_rotary/main/rotary.cpp:56:5: warning: missing initializer for member 'pcnt_chan_config_t::flags' [-Wmissing-field-initializers]
+   56 |     };
+      |     ^
+/home/edgie/esp/read_rotary/main/rotary.cpp:62:5: warning: missing initializer for member 'pcnt_chan_config_t::flags' [-Wmissing-field-initializers]
+   62 |     };
+      |     ^
+/home/edgie/esp/read_rotary/main/rotary.cpp:82:13: error: 'xQueueCreate' was not declared in this scope; did you mean 'xQueueReset'?
+   82 |     queue = xQueueCreate(10, sizeof(int));
+      |             ^~~~~~~~~~~~
+      |             xQueueReset
+/home/edgie/esp/read_rotary/main/read_rotary.cpp: In function 'void app_main()':
+/home/edgie/esp/read_rotary/main/read_rotary.cpp:33:13: error: 'xQueueReceive' was not declared in this scope; did you mean 'xQueueReset'?
+   33 |         if (xQueueReceive(queue, &event_count, pdMS_TO_TICKS(1000)))
+      |             ^~~~~~~~~~~~~
+      |             xQueueReset
+ninja: build stopped: subcommand failed.
